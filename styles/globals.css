@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+.ql-toolbar {
+  @apply absolute right-0 left-0 top-0 bg-white z-10;
+}
