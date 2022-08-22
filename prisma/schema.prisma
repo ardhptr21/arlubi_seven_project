@@ -6,3 +6,16 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model Extracurricular {
+  id           String   @id @default(cuid())
+  name         String
+  short        String
+  long         String
+  slug         String   @unique
+  header_image String?
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+
+  @@map("extracurriculars")
+}
