@@ -1,9 +1,10 @@
 import Hero from '@/components/base/Hero';
 import Section from '@/components/base/Section';
+import LayoutBase from '@/components/layout/LayoutBase';
 
 export default function DetailEkstrakurikuler() {
   return (
-    <>
+    <LayoutBase>
       <Section>
         <Hero
           title="Basket"
@@ -39,6 +40,6 @@ export default function DetailEkstrakurikuler() {
           </li>
         </ol>
       </Section>
-    </>
+    </LayoutBase>
   );
 }

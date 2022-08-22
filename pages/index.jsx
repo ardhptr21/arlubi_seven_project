@@ -1,10 +1,11 @@
 import Section from '@/components/base/Section';
 import Hero from '@/components/base/Hero';
 import CardEC from '@/components/card/CardEC';
+import LayoutBase from '@/components/layout/LayoutBase';
 
 export default function Home() {
   return (
-    <>
+    <LayoutBase>
       <Section>
         <Hero
           title="Temukan Ekstrakurikuler Favoritmu"
@@ -36,6 +37,6 @@ export default function Home() {
           short="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quo quas ipsum porro quam repellat laboriosam corporis mollitia, a sed!"
         />
       </Section>
-    </>
+    </LayoutBase>
   );
 }
