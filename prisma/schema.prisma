@@ -7,6 +7,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id    String  @id @default(cuid())
+  name  String
+  email String  @unique
+  nis   Int     @unique
+  class String
+  image String?
+
+  @@map("users")
+}
+
 model Extracurricular {
   id           String   @id @default(cuid())
   name         String
