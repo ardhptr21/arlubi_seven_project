@@ -8,26 +8,47 @@ datasource db {
 }
 
 model User {
-  id       String  @id @default(cuid())
-  name     String
-  email    String  @unique
-  nis      Int     @unique
-  class    String
-  image    String?
-  password String
+  id               String                   @id @default(cuid())
+  name             String
+  email            String                   @unique
+  nis              Int                      @unique
+  class            String
+  image            String?
+  password         String
+  extracurriculars UsersOnExtracurricular[]
 
   @@map("users")
 }
 
 model Extracurricular {
-  id           String   @id @default(cuid())
+  id           String                   @id @default(cuid())
   name         String
   short        String
   long         String
-  slug         String   @unique
+  slug         String                   @unique
   header_image String?
-  created_at   DateTime @default(now())
-  updated_at   DateTime @updatedAt
+  created_at   DateTime                 @default(now())
+  updated_at   DateTime                 @updatedAt
+  users        UsersOnExtracurricular[]
 
   @@map("extracurriculars")
+}
+
+model UsersOnExtracurricular {
+  id                 String          @id @default(cuid())
+  user               User            @relation(fields: [user_id], references: [id])
+  user_id            String
+  extracurricular    Extracurricular @relation(fields: [extracurricular_id], references: [id])
+  extracurricular_id String
+  status             Status          @default(pending)
+  created_at         DateTime        @default(now())
+  updated_at         DateTime        @updatedAt
+
+  @@map("users_on_extracurriculars")
+}
+
+enum Status {
+  pending
+  accepted
+  rejected
 }
