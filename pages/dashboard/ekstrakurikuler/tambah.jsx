@@ -4,6 +4,7 @@ import QuillEditor from '@/components/form/QuillEditor';
 import Textarea from '@/components/form/Textarea';
 import LayoutDashboard from '@/components/layout/LayoutDashboard';
 import { addExtraCurricular } from 'api/extracurricular';
+import { authenticated } from 'middleware/auth';
 import { useState } from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { toast, ToastContainer } from 'react-toastify';
@@ -97,3 +98,5 @@ export default function Create() {
     </LayoutDashboard>
   );
 }
+
+export const getServerSideProps = authenticated(async () => ({ props: {} }));

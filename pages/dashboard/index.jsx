@@ -3,6 +3,7 @@ import LayoutDashboard from '@/components/layout/LayoutDashboard';
 import { VscOrganization } from 'react-icons/vsc';
 import { HiOutlineUser } from 'react-icons/hi';
 import { AiOutlineNotification, AiOutlineDashboard } from 'react-icons/ai';
+import { authenticated } from 'middleware/auth';
 
 export default function Dashboard() {
   return (
@@ -20,4 +21,4 @@ export default function Dashboard() {
   );
 }
 
-Dashboard.auth = true;
+export const getServerSideProps = authenticated(async () => ({ props: {} }));

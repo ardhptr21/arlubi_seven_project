@@ -3,6 +3,7 @@ import Input from '@/components/form/Input';
 import Link from 'next/link';
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
+import { notAuthenticated } from 'middleware/auth';
 
 export default function Masuk() {
   const [credentials, setCredentials] = useState({
@@ -60,3 +61,5 @@ export default function Masuk() {
     </div>
   );
 }
+
+export const getServerSideProps = notAuthenticated(async (ctx) => ({ props: {} }));

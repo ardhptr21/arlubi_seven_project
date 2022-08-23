@@ -2,6 +2,7 @@ import LayoutDashboard from '@/components/layout/LayoutDashboard';
 import { FiSettings } from 'react-icons/fi';
 import Input from '@/components/form/Input';
 import ButtonFill from '@/components/button/ButtonFill';
+import { authenticated } from 'middleware/auth';
 
 export default function Setelan() {
   return (
@@ -29,3 +30,5 @@ export default function Setelan() {
     </LayoutDashboard>
   );
 }
+
+export const getServerSideProps = authenticated(async () => ({ props: {} }));

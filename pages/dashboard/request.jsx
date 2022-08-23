@@ -1,6 +1,7 @@
 import LayoutDashboard from '@/components/layout/LayoutDashboard';
 import { AiOutlineNotification } from 'react-icons/ai';
 import ButtonFill from '@/components/button/ButtonFill';
+import { authenticated } from 'middleware/auth';
 
 export default function Request() {
   return (
@@ -33,3 +34,5 @@ export default function Request() {
     </LayoutDashboard>
   );
 }
+
+export const getServerSideProps = authenticated(async () => ({ props: {} }));

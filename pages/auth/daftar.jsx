@@ -1,6 +1,7 @@
 import ButtonFill from '@/components/button/ButtonFill';
 import Input from '@/components/form/Input';
 import { addUser } from 'api/user';
+import { notAuthenticated } from 'middleware/auth';
 import Link from 'next/link';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
@@ -130,3 +131,5 @@ export default function Daftar() {
     </div>
   );
 }
+
+export const getServerSideProps = notAuthenticated(async () => ({ props: {} }));
