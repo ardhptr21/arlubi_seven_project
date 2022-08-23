@@ -35,9 +35,6 @@ export default function LeftBar() {
                   icon={AiOutlinePlus}
                 />
               </li>
-              <li>
-                <LeftBarItem name="Ekstrakurikuler" icon={VscOrganization} />
-              </li>
             </ul>
           </nav>
         </div>

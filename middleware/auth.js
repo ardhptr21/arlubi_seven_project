@@ -13,7 +13,7 @@ export const authenticated = (gssp) => {
       };
     }
 
-    return await gssp(ctx);
+    return await gssp(ctx, session);
   };
 };
 
