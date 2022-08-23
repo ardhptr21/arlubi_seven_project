@@ -19,3 +19,5 @@ export default function Dashboard() {
     </LayoutDashboard>
   );
 }
+
+Dashboard.auth = true;

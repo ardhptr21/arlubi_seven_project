@@ -2,8 +2,10 @@ import Link from 'next/link';
 import Section from '../base/Section';
 import ButtonFill from '../button/ButtonFill';
 import ButtonOutline from '../button/ButtonOutline';
+import { useSession } from 'next-auth/react';
 
 export default function Navbar() {
+  const { data: session, status } = useSession();
   return (
     <Section>
       <nav className="flex justify-between">
@@ -17,16 +19,27 @@ export default function Navbar() {
           </a>
         </Link>
         <div className="space-x-5">
-          <Link href="/auth/masuk">
-            <a>
-              <ButtonFill>Masuk</ButtonFill>
-            </a>
-          </Link>
-          <Link href="/auth/daftar">
-            <a>
-              <ButtonOutline>Daftar</ButtonOutline>
-            </a>
-          </Link>
+          {status !== 'authenticated' ? (
+            <>
+              <Link href="/auth/masuk">
+                <a>
+                  <ButtonFill>Masuk</ButtonFill>
+                </a>
+              </Link>
+              <Link href="/auth/daftar">
+                <a>
+                  <ButtonOutline>Daftar</ButtonOutline>
+                </a>
+              </Link>
+            </>
+          ) : (
+            <Link href="/dashboard">
+              <a className="flex justify-center items-center gap-3">
+                <div className="h-12 w-12 bg-gray-200 rounded-full"></div>
+                <p className="font-medium">{session.user.name}</p>
+              </a>
+            </Link>
+          )}
         </div>
       </nav>
     </Section>
