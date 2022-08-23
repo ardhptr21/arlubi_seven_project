@@ -11,6 +11,15 @@ export const getExtracurriculars = async () => {
   }
 };
 
+export const getExtracurricular = async (slug) => {
+  try {
+    const res = await axios.get(`${BASE_API_URL}/api/extracurriculars/${slug}`);
+    return res.data.data;
+  } catch (err) {
+    throw err;
+  }
+};
+
 export const addExtraCurricular = async (extraCurricular) => {
   try {
     const res = await axios.post(`${BASE_API_URL}/api/extracurriculars`, extraCurricular);
