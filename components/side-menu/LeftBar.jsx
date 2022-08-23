@@ -26,10 +26,14 @@ export default function LeftBar() {
                 <LeftBarItem name="Setelan" icon={FiSettings} />
               </li>
               <li>
-                <LeftBarItem name="Requests" icon={AiOutlineNotification} />
+                <LeftBarItem name="Request" href="/dashboard/request" icon={AiOutlineNotification} />
               </li>
               <li>
-                <LeftBarItem name="Tambah Ekstrakurikuler" icon={AiOutlinePlus} />
+                <LeftBarItem
+                  name="Tambah Ekstrakurikuler"
+                  href="/dashboard/ekstrakurikuler/tambah"
+                  icon={AiOutlinePlus}
+                />
               </li>
               <li>
                 <LeftBarItem name="Ekstrakurikuler" icon={VscOrganization} />

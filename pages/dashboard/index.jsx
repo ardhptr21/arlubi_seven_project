@@ -14,7 +14,7 @@ export default function Dashboard() {
       <section className="grid grid-cols-3 gap-5">
         <CardStat icon={VscOrganization} title="Total Ekstrakulikuler" value="12" />
         <CardStat icon={HiOutlineUser} title="Jumlah User" value="56" />
-        <CardStat icon={AiOutlineNotification} title="Request Pending" value="12" />
+        <CardStat icon={AiOutlineNotification} title="Permintaan Menunggu" value="12" />
       </section>
     </LayoutDashboard>
   );

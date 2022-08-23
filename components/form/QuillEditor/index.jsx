@@ -13,7 +13,7 @@ const modules = {
   ],
 };
 
-export default function QuillEditor({ title, ...props }) {
+export default function QuillEditor({ title, error, ...props }) {
   const scrollRef = useRef(null);
 
   const handleInput = (e) => {
@@ -24,7 +24,10 @@ export default function QuillEditor({ title, ...props }) {
 
   return (
     <div>
-      <p className="text-sm mb-2 font-medium">{title}</p>
+      <div className="mb-2">
+        <p className="text-sm font-medium">{title}</p>
+        {error && <small className="text-red-500">{error}</small>}
+      </div>
       <div className="relative">
         <div className="max-h-96 overflow-y-auto pt-10" ref={scrollRef}>
           <ReactQuill theme="snow" {...props} modules={modules} onKeyDown={handleInput} />

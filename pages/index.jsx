@@ -2,8 +2,9 @@ import Section from '@/components/base/Section';
 import Hero from '@/components/base/Hero';
 import CardEC from '@/components/card/CardEC';
 import LayoutBase from '@/components/layout/LayoutBase';
+import { getExtracurriculars } from 'api/extracurricular';
 
-export default function Home() {
+export default function Home({ extracurriculars }) {
   return (
     <LayoutBase>
       <Section>
@@ -16,27 +17,18 @@ export default function Home() {
         />
       </Section>
       <Section className="grid md:grid-cols-2 grid-cols-1 mt-10 gap-5">
-        <CardEC
-          name="Paskibra"
-          members="16"
-          short="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quo quas ipsum porro quam repellat laboriosam corporis mollitia, a sed!"
-        />
-        <CardEC
-          name="Voli"
-          members="35"
-          short="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quo quas ipsum porro quam repellat laboriosam corporis mollitia, a sed!"
-        />
-        <CardEC
-          name="Basket"
-          members="24"
-          short="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quo quas ipsum porro quam repellat laboriosam corporis mollitia, a sed!"
-        />
-        <CardEC
-          name="Argapeta"
-          members="49"
-          short="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quo quas ipsum porro quam repellat laboriosam corporis mollitia, a sed!"
-        />
+        {extracurriculars.map((ec) => (
+          <CardEC name={ec.name} members="10" short={ec.short} key={ec.id} />
+        ))}
       </Section>
     </LayoutBase>
   );
 }
+
+export const getServerSideProps = async (ctx) => {
+  const extracurriculars = await getExtracurriculars();
+
+  return {
+    props: { extracurriculars },
+  };
+};

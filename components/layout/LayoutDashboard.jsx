@@ -4,7 +4,7 @@ export default function LayoutDashboard({ children, title, description, icon: Ic
   return (
     <div className="flex overflow-hidden">
       <LeftBar />
-      <main className="p-10 overflow-y-auto w-full">
+      <main className="p-10 overflow-y-auto max-h-screen w-full">
         <div>
           <div className="flex gap-5 items-center">
             <div className="h-16 w-16 flex justify-center items-center text-white bg-indigo-600 rounded-full">
