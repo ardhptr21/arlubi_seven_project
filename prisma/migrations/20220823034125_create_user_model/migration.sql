@@ -6,6 +6,7 @@ CREATE TABLE `users` (
     `nis` INTEGER NOT NULL,
     `class` VARCHAR(191) NOT NULL,
     `image` VARCHAR(191) NULL,
+    `password` VARCHAR(191) NOT NULL,
 
     UNIQUE INDEX `users_email_key`(`email`),
     UNIQUE INDEX `users_nis_key`(`nis`),

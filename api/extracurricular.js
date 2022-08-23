@@ -16,6 +16,9 @@ export const addExtraCurricular = async (extraCurricular) => {
     const res = await axios.post(`${BASE_API_URL}/api/extracurriculars`, extraCurricular);
     return [res.data, null];
   } catch (err) {
-    return [null, err?.response?.data.errors];
+    if (!err?.response?.data?.errors) {
+      throw err;
+    }
+    return [null, err?.response?.data?.errors];
   }
 };

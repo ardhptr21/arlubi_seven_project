@@ -41,6 +41,13 @@ export default function Create() {
     }
   };
 
+  const handleChange = (e) => {
+    setEcData({
+      ...ecData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <LayoutDashboard
       title="Tambah Ekstrakurikuler"
@@ -56,7 +63,7 @@ export default function Create() {
           className="w-full"
           error={errors?.name}
           value={ecData.name}
-          onChange={(e) => setEcData({ ...ecData, name: e.target.value })}
+          onChange={handleChange}
           disabled={loading}
         />
         <Textarea
@@ -66,7 +73,7 @@ export default function Create() {
           className="resize-none h-48"
           error={errors?.short}
           value={ecData.short}
-          onChange={(e) => setEcData({ ...ecData, short: e.target.value })}
+          onChange={handleChange}
           disabled={loading}
         ></Textarea>
         <QuillEditor

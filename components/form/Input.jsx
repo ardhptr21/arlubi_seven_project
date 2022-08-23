@@ -10,6 +10,7 @@ export default function Input({ title, name, type = 'text', icon, error, ...prop
           {...props}
           type={type}
           id={name}
+          name={name}
           className="w-full disabled:bg-gray-200 p-4 pr-12 text-sm border border-gray-200 rounded-lg shadow-sm"
         />
         {icon && <span className="absolute inset-y-0 inline-flex items-center right-4">{icon}</span>}

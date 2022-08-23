@@ -8,12 +8,13 @@ datasource db {
 }
 
 model User {
-  id    String  @id @default(cuid())
-  name  String
-  email String  @unique
-  nis   Int     @unique
-  class String
-  image String?
+  id       String  @id @default(cuid())
+  name     String
+  email    String  @unique
+  nis      Int     @unique
+  class    String
+  image    String?
+  password String
 
   @@map("users")
 }
