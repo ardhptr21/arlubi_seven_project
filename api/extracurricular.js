@@ -20,9 +20,9 @@ export const getExtracurricular = async (slug, user_id = '') => {
   }
 };
 
-export const addExtraCurricular = async (extraCurricular) => {
+export const addExtraCurricular = async (extracurricular) => {
   try {
-    const res = await axios.post(`${BASE_API_URL}/api/extracurriculars`, extraCurricular);
+    const res = await axios.post(`${BASE_API_URL}/api/extracurriculars`, extracurricular);
     return [res.data, null];
   } catch (err) {
     if (!err?.response?.data?.errors) {

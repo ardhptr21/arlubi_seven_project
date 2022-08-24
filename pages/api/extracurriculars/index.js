@@ -47,9 +47,9 @@ const handlerGET = async (req, res) => {
  * @param {import('next').NextApiResponse} res
  */
 const handlerPOST = async (req, res) => {
-  const { name, short, long, header_image } = req.body;
+  const { name, short, long, header_image, card_image } = req.body;
 
-  const { error, value } = extracurricularValidator.validate({ name, short, long, header_image });
+  const { error, value } = extracurricularValidator.validate({ name, short, long, header_image, card_image });
 
   if (error) return res.status(400).json({ status: 'error', errors: joiErrorParser(error) });
 

@@ -18,7 +18,14 @@ export default function Home({ extracurriculars }) {
       </Section>
       <Section className="grid md:grid-cols-2 grid-cols-1 mt-10 gap-5">
         {extracurriculars.map((ec) => (
-          <CardEC name={ec.name} href={`/ekstrakurikuler/${ec.slug}`} members="10" short={ec.short} key={ec.id} />
+          <CardEC
+            name={ec.name}
+            href={`/ekstrakurikuler/${ec.slug}`}
+            image={ec.card_image}
+            members="10"
+            short={ec.short}
+            key={ec.id}
+          />
         ))}
       </Section>
     </LayoutBase>

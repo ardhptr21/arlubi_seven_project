@@ -26,9 +26,17 @@ export default function DetailEkstrakurikuler({ extracurricular, user }) {
       <Section className="flex gap-10 justify-center items-start">
         <div className="w-full" style={{ flex: 3 }}>
           <div>
-            <Hero style={{ background: `url(${extracurricular.image})` }} overlay={true} title={extracurricular.name} detail={extracurricular.short} />
+            <Hero
+              style={{ backgroundImage: `url(${extracurricular.header_image})` }}
+              overlay={true}
+              title={extracurricular.name}
+              detail={extracurricular.short}
+            />
           </div>
-          <div dangerouslySetInnerHTML={{ __html: extracurricular.long }} className="mt-5 prose-base prose-ul:list-disc prose-ol:list-decimal prose-headings:font-bold prose-headings:text-gray-800 prose-p:text-gray-600"></div>
+          <div
+            dangerouslySetInnerHTML={{ __html: extracurricular.long }}
+            className="mt-5 prose-base prose-ul:list-disc prose-ol:list-decimal prose-headings:font-bold prose-headings:text-gray-800 prose-p:text-gray-600"
+          ></div>
         </div>
         <div className="border-2 p-5 border-gray-200 space-y-8 rounded-xl w-full" style={{ flex: 1 }}>
           <div>
@@ -44,7 +52,9 @@ export default function DetailEkstrakurikuler({ extracurricular, user }) {
               <p className="text-sm font-bold">STATUS</p>
               <div className="mt-5">
                 {userEcStatus ? (
-                  <h5 className="border-2 border-yellow-500 bg-yellow-400 p-2 rounded-xl text-xl text-center capitalize text-white font-bold">{userEcStatus}</h5>
+                  <h5 className="border-2 border-yellow-500 bg-yellow-400 p-2 rounded-xl text-xl text-center capitalize text-white font-bold">
+                    {userEcStatus}
+                  </h5>
                 ) : (
                   <div>
                     <p>Kamu belum bergabung dalam ekstrakurikuler ini</p>

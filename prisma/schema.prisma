@@ -8,10 +8,10 @@ datasource db {
 }
 
 model User {
-  id               String                   @id @default(cuid())
+  id               String                    @id @default(cuid())
   name             String
-  email            String                   @unique
-  nis              Int                      @unique
+  email            String                    @unique
+  nis              String                    @unique
   class            String
   image            String?
   password         String
@@ -21,14 +21,15 @@ model User {
 }
 
 model Extracurricular {
-  id           String                   @id @default(cuid())
+  id           String                    @id @default(cuid())
   name         String
-  short        String
-  long         String
-  slug         String                   @unique
+  short        String                    @db.TinyText
+  long         String                    @db.Text
+  slug         String                    @unique
+  card_image   String?
   header_image String?
-  created_at   DateTime                 @default(now())
-  updated_at   DateTime                 @updatedAt
+  created_at   DateTime                  @default(now())
+  updated_at   DateTime                  @updatedAt
   users        UsersOnExtracurriculars[]
 
   @@map("extracurriculars")
@@ -43,8 +44,8 @@ model UsersOnExtracurriculars {
   created_at         DateTime        @default(now())
   updated_at         DateTime        @updatedAt
 
-  @@map("users_on_extracurriculars")
   @@id([user_id, extracurricular_id])
+  @@map("users_on_extracurriculars")
 }
 
 enum Status {

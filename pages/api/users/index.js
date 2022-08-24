@@ -32,6 +32,7 @@ const handlerPOST = async (req, res) => {
 
   try {
     value.password = await bcrypt.hash(value.password, 10);
+    value.nis = value.nis.toString();
     const user = await prisma.user.create({ data: value });
     return res.status(201).json({ status: 'success', data: user });
   } catch (err) {
