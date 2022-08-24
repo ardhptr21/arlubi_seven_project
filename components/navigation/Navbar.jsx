@@ -14,7 +14,7 @@ export default function Navbar() {
             <div className="h-10 w-10 rounded-full bg-indigo-300"></div>
             <div>
               <h2 className="font-bold text-gray-800">Ekstrakurikuler</h2>
-              <p className="text-gray-600 text-xs">12 Ekstrakurikuler</p>
+              <p className="text-gray-600 text-xs">1 Ekstrakurikuler</p>
             </div>
           </a>
         </Link>

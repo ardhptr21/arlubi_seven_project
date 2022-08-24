@@ -3,7 +3,6 @@ import { FiSettings } from 'react-icons/fi';
 import Input from '@/components/form/Input';
 import ButtonFill from '@/components/button/ButtonFill';
 import { authenticated } from 'middleware/auth';
-import { useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 import { getUser, updateUser } from 'api/user';
 import { toast } from 'react-toastify';
@@ -18,16 +17,9 @@ const credentialsInitialState = {
 };
 
 export default function Setelan({ user }) {
-  const [credentials, setCredentials] = useState(credentialsInitialState);
+  const [credentials, setCredentials] = useState(user);
   const [errors, setErrors] = useState(null);
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    (async () => {
-      const credentials = await getUser(user.email);
-      setCredentials(credentials);
-    })();
-  }, [user]);
 
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });

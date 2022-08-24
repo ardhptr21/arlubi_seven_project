@@ -16,13 +16,29 @@ const options = {
   session: {
     strategy: 'jwt',
   },
+  callbacks: {
+    async session({ session, user, token }) {
+      let userFind = await prisma.user.findUnique({ where: { id: token.sub } });
+      session.user.id = userFind.id;
+      session.user.email = userFind.email;
+
+      if (userFind.role) {
+        session.user.role = userFind.role;
+      } else {
+        session.user.name = userFind.name;
+        session.user.class = userFind.class;
+        session.user.nis = userFind.nis;
+      }
+      return session;
+    },
+  },
   providers: [
     CredentialsProvider({
       credentials: {
         email: { label: 'Email', type: 'text', placeholder: 'Your Email' },
         password: { label: 'Password', type: 'password', placeholder: 'Your Password' },
       },
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         const user = await prisma.user.findUnique({
           where: { email: credentials.email },
         });

@@ -35,7 +35,6 @@ export default function Daftar() {
       console.log(err);
       toast.error('Akun gagal ditambahkan');
     } finally {
-      setErrors(null);
       setLoading(false);
     }
   };

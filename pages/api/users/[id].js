@@ -28,7 +28,7 @@ const handler = async (req, res) => {
 const handlerGET = async (req, res) => {
   const id = req.query.id;
   try {
-    let user = await prisma.user.findFirst({ where: { OR: [{ id }, { email: id }] } });
+    let user = await prisma.user.findUnique({ where: { id } });
     user = excludeFields(user, 'password');
 
     if (!user) {
