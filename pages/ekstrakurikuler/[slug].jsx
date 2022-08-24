@@ -43,7 +43,7 @@ export default function DetailEkstrakurikuler({ extracurricular, user }) {
               <div className="flex justify-start gap-3 items-center">
                 <div className="w-10 h-10 rounded-full bg-gray-200"></div>
                 <div>
-                  <p className="font-medium">Bintang Tri Admaja</p>
+                  <p className="font-medium">Bintang Triadmaja</p>
                   <small>XII SIJA 2</small>
                 </div>
               </div>
@@ -54,7 +54,7 @@ export default function DetailEkstrakurikuler({ extracurricular, user }) {
               <p className="text-sm font-bold">STATUS</p>
               <div className="mt-5">
                 {userEcStatus ? (
-                  <h5 className="border-2 border-red-600 bg-red-400 p-2 rounded-xl text-xl text-center capitalize text-white font-bold">{userEcStatus}</h5>
+                  <h5 className="border-2 border-yellow-500 bg-yellow-400 p-2 rounded-xl text-xl text-center capitalize text-white font-bold">{userEcStatus}</h5>
                 ) : (
                   <div>
                     <p>Kamu belum bergabung dalam ekstrakurikuler ini</p>
