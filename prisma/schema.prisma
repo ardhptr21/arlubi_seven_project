@@ -15,7 +15,7 @@ model User {
   class            String
   image            String?
   password         String
-  extracurriculars UsersOnExtracurricular[]
+  extracurriculars UsersOnExtracurriculars[]
 
   @@map("users")
 }
@@ -29,13 +29,12 @@ model Extracurricular {
   header_image String?
   created_at   DateTime                 @default(now())
   updated_at   DateTime                 @updatedAt
-  users        UsersOnExtracurricular[]
+  users        UsersOnExtracurriculars[]
 
   @@map("extracurriculars")
 }
 
-model UsersOnExtracurricular {
-  id                 String          @id @default(cuid())
+model UsersOnExtracurriculars {
   user               User            @relation(fields: [user_id], references: [id])
   user_id            String
   extracurricular    Extracurricular @relation(fields: [extracurricular_id], references: [id])
@@ -45,6 +44,7 @@ model UsersOnExtracurricular {
   updated_at         DateTime        @updatedAt
 
   @@map("users_on_extracurriculars")
+  @@id([user_id, extracurricular_id])
 }
 
 enum Status {

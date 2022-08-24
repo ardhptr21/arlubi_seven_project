@@ -11,9 +11,9 @@ export const getExtracurriculars = async () => {
   }
 };
 
-export const getExtracurricular = async (slug) => {
+export const getExtracurricular = async (slug, user_id = '') => {
   try {
-    const res = await axios.get(`${BASE_API_URL}/api/extracurriculars/${slug}`);
+    const res = await axios.get(`${BASE_API_URL}/api/extracurriculars/${slug}?user_id=${user_id}`);
     return res.data.data;
   } catch (err) {
     throw err;
