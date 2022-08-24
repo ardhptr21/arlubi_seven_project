@@ -1,6 +1,7 @@
 import Hero from '@/components/base/Hero';
 import Section from '@/components/base/Section';
 import ButtonFill from '@/components/button/ButtonFill';
+import CardUser from '@/components/card/CardUser';
 import LayoutBase from '@/components/layout/LayoutBase';
 import { getExtracurricular } from 'api/extracurricular';
 import { sendRequest } from 'api/useronec';
@@ -33,20 +34,9 @@ export default function DetailEkstrakurikuler({ extracurricular, user }) {
           <div>
             <p className="text-sm font-bold">ANGGOTA</p>
             <div className="mt-5 space-y-3">
-              <div className="flex justify-start gap-3 items-center">
-                <div className="w-10 h-10 rounded-full bg-gray-200"></div>
-                <div>
-                  <p className="font-medium">Ardhi Putra Pradana</p>
-                  <small>XII SIJA 1</small>
-                </div>
-              </div>
-              <div className="flex justify-start gap-3 items-center">
-                <div className="w-10 h-10 rounded-full bg-gray-200"></div>
-                <div>
-                  <p className="font-medium">Bintang Triadmaja</p>
-                  <small>XII SIJA 2</small>
-                </div>
-              </div>
+              {extracurricular.users.map(({ user }, idx) => (
+                <CardUser data={user} key={idx} />
+              ))}
             </div>
           </div>
           {user && (
@@ -82,7 +72,6 @@ export const getServerSideProps = async (ctx) => {
     console.log(err.message);
   }
   const user = session?.user || false;
-
   return {
     props: { extracurricular, user },
   };

@@ -17,6 +17,19 @@ const handler = async (req, res) => {
       where: {
         slug,
       },
+      include: {
+        users: {
+          include: {
+            user: {
+              select: {
+                name: true,
+                class: true,
+                image: true,
+              },
+            },
+          },
+        },
+      },
     });
 
     if (!extracurricular) {
