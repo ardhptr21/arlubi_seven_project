@@ -3,18 +3,9 @@ import { FiSettings } from 'react-icons/fi';
 import Input from '@/components/form/Input';
 import ButtonFill from '@/components/button/ButtonFill';
 import { authenticated } from 'middleware/auth';
-import { useEffect, useState } from 'react';
-import { getUser, updateUser } from 'api/user';
+import { useState } from 'react';
+import { updateUser, uploadPhoto } from 'api/user';
 import { toast } from 'react-toastify';
-
-const credentialsInitialState = {
-  id: '',
-  name: '',
-  email: '',
-  nis: '',
-  class: '',
-  image: '',
-};
 
 export default function Setelan({ user }) {
   const [credentials, setCredentials] = useState(user);
@@ -46,6 +37,19 @@ export default function Setelan({ user }) {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleInput = async (e) => {
+    const file = e.target.files[0];
+    const formData = new FormData();
+    formData.append('image', file);
+    try {
+      const data = await uploadPhoto(formData, user.id);
+      setCredentials({ ...credentials, image: data });
+    } catch (err) {
+      console.log(err);
+    }
+    e.target.value = null;
   };
 
   return (
@@ -93,12 +97,16 @@ export default function Setelan({ user }) {
           </ButtonFill>
         </form>
         <div>
-          <div
-            className="h-52 w-52 rounded-full bg-cover bg-center bg-gray-200"
-            style={{
-              backgroundImage: `url(${credentials.image})`,
-            }}
-          ></div>
+          <label htmlFor="photo" className="cursor-pointer">
+            <div
+              className="h-52 w-52 rounded-full bg-cover bg-center bg-gray-200"
+              style={{
+                backgroundImage: `url(${credentials.image})`,
+              }}
+            >
+              <input onInput={handleInput} accept="image/*" type="file" id="photo" hidden />
+            </div>
+          </label>
         </div>
       </div>
     </LayoutDashboard>

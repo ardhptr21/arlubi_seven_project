@@ -4,7 +4,8 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/lib/*": ["lib/*"],
-      "@/validator/*": ["validator/*"]
+      "@/validator/*": ["validator/*"],
+      "@/utils/*": ["utils/*"]
     }
   }
 }

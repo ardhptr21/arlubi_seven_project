@@ -34,3 +34,16 @@ export const addUser = async (credentials) => {
     return [null, err?.response?.data?.errors];
   }
 };
+
+export const uploadPhoto = async (formData, id) => {
+  try {
+    const res = await axios.patch(`${BASE_API_URL}/api/users/${id}/photo`, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+    return res.data.data;
+  } catch (err) {
+    throw err;
+  }
+};

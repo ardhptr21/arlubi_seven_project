@@ -28,6 +28,7 @@ const options = {
         session.user.name = userFind.name;
         session.user.class = userFind.class;
         session.user.nis = userFind.nis;
+        session.user.image = userFind.image;
       }
       return session;
     },
