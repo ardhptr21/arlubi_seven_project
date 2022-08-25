@@ -1,3 +1,4 @@
+import Footer from '../navigation/Footer';
 import Navbar from '../navigation/Navbar';
 
 export default function LayoutBase({ children }) {
@@ -7,6 +8,7 @@ export default function LayoutBase({ children }) {
         <Navbar />
       </header>
       <main className="py-10">{children}</main>
+      <Footer />
     </>
   );
 }

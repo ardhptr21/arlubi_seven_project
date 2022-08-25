@@ -1,9 +1,10 @@
-import { PrismaClient } from '@prisma/client';
-import bcrypt from 'bcrypt';
+const { PrismaClient } = require('@prisma/client');
+const bcrypt = require('bcrypt');
 const prisma = new PrismaClient();
+const arlubidb = require('../arlubidb.json');
 
 async function main() {
-  const admin = await prisma.user.upsert({
+  await prisma.user.upsert({
     where: { email: 'admin@arlubi.com' },
     update: {
       role: 'admin',
@@ -16,10 +17,13 @@ async function main() {
     },
   });
 
-  console.log(admin);
+  await prisma.extracurricular.createMany({ data: arlubidb });
 }
 
 main()
+  .then(() => {
+    console.log('Seeding successfull');
+  })
   .catch((e) => {
     console.log(e);
     process.exit(1);

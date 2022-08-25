@@ -42,9 +42,9 @@ model Extracurricular {
 }
 
 model UsersOnExtracurriculars {
-  user               User            @relation(fields: [user_id], references: [id])
+  user               User            @relation(fields: [user_id], references: [id], onDelete: Cascade)
   user_id            String
-  extracurricular    Extracurricular @relation(fields: [extracurricular_id], references: [id])
+  extracurricular    Extracurricular @relation(fields: [extracurricular_id], references: [id], onDelete: Cascade)
   extracurricular_id String
   status             Status          @default(pending)
   created_at         DateTime        @default(now())
