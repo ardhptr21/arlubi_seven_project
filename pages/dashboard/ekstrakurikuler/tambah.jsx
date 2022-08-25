@@ -93,14 +93,20 @@ export default function Create({ ecWillUpdate }) {
         const res = await uploadImage(header_image, 'ec_header_photos');
         data_send.header_image = `${res.secure_url}?public_id=${res.public_id}`;
         if (ecWillUpdate.header_image) {
-          await deleteImage(parseSearchParams(ecWillUpdate.header_image).get('public_id'));
+          const public_id = parseSearchParams(ecWillUpdate.header_image).get('public_id');
+          if (public_id) {
+            await deleteImage(public_id);
+          }
         }
       }
       if (card_image) {
         const res = await uploadImage(card_image, 'ec_card_photos');
         data_send.card_image = `${res.secure_url}?public_id=${res.public_id}`;
         if (ecWillUpdate.card_image) {
-          await deleteImage(parseSearchParams(ecWillUpdate.card_image).get('public_id'));
+          const public_id = parseSearchParams(ecWillUpdate.card_image).get('public_id');
+          if (public_id) {
+            await deleteImage(public_id);
+          }
         }
       }
       const [data, errors] = await updateExtraCurricular(ecWillUpdate.id, data_send);
