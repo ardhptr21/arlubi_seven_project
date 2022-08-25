@@ -2,6 +2,8 @@ import prisma from '@/lib/prisma';
 import { removeImageFromCloudinary } from '@/utils/cloudinary';
 import parseSearchParams from '@/utils/parseSearchParams';
 import { getSession } from 'next-auth/react';
+import extracurricularValidator from '@/validator/extracurricularValidator';
+import joiErrorParser from '@/utils/joiErrorParser';
 
 /**
  *
@@ -17,6 +19,8 @@ const handler = async (req, res) => {
   switch (req.method) {
     case 'DELETE':
       return await handlerDELETE(req, res);
+    case 'PUT':
+      return await handlerPUT(req, res);
     default:
       return res.status(405).json({ status: 'error', message: `Method ${req.method} not allowed` });
   }
@@ -66,6 +70,22 @@ const handlerGET = async (req, res) => {
     return res.status(200).json({ status: 'success', data: { ...extracurricular, status } });
   } catch (err) {
     res.status(500).json({ status: 'error', message: err.message });
+  }
+};
+
+const handlerPUT = async (req, res) => {
+  const { name, short, long, header_image, card_image } = req.body;
+  const id = req.query.slug;
+
+  const { error, value } = extracurricularValidator.validate({ name, short, long, header_image, card_image });
+
+  if (error) return res.status(400).json({ status: 'error', errors: joiErrorParser(error) });
+
+  try {
+    const extracurricular = await prisma.extracurricular.update({ where: { id }, data: { ...value } });
+    return res.status(201).json({ status: 'success', data: extracurricular });
+  } catch (err) {
+    return res.status(500).json({ status: 'error', message: err.message });
   }
 };
 

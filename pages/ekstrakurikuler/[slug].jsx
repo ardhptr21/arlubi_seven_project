@@ -14,6 +14,7 @@ import { BsFillTrashFill, BsFillPencilFill } from 'react-icons/bs';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function DetailEkstrakurikuler({ extracurricular, user }) {
   const router = useRouter();
@@ -64,9 +65,13 @@ export default function DetailEkstrakurikuler({ extracurricular, user }) {
             />
             {user.role === 'admin' && (
               <div className="mt-5 flex max-w-max items-center gap-5">
-                <ButtonFill disabled={loading} colorSpace="warning">
-                  Edit <BsFillPencilFill size={18} />
-                </ButtonFill>
+                <Link href={`/dashboard/ekstrakurikuler/tambah?update=true&slug=${extracurricular.slug}`}>
+                  <a>
+                    <ButtonFill disabled={loading} colorSpace="warning">
+                      Edit <BsFillPencilFill size={18} />
+                    </ButtonFill>
+                  </a>
+                </Link>
                 <ButtonFill disabled={loading} onClick={handleDelete} colorSpace="danger">
                   Delete <BsFillTrashFill size={18} />
                 </ButtonFill>

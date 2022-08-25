@@ -18,3 +18,12 @@ export const uploadImage = async (image, path) => {
     throw err;
   }
 };
+
+export const deleteImage = async (public_id) => {
+  try {
+    const res = await axios.delete(`${BASE_API_URL}/api/images/delete`, { data: { public_id } });
+    return res.data;
+  } catch (err) {
+    throw err;
+  }
+};

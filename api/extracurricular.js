@@ -23,7 +23,7 @@ export const getExtracurricular = async (slug, user_id = '') => {
 export const addExtraCurricular = async (extracurricular) => {
   try {
     const res = await axios.post(`${BASE_API_URL}/api/extracurriculars`, extracurricular);
-    return [res.data, null];
+    return [res.data.data, null];
   } catch (err) {
     if (!err?.response?.data?.errors) {
       throw err;
@@ -38,5 +38,17 @@ export const deleteExtraCurricular = async (id) => {
     return res.data.data;
   } catch (err) {
     throw err;
+  }
+};
+
+export const updateExtraCurricular = async (id, extracurricular) => {
+  try {
+    const res = await axios.put(`${BASE_API_URL}/api/extracurriculars/${id}`, extracurricular);
+    return [res.data.data, null];
+  } catch (err) {
+    if (!err?.response?.data?.errors) {
+      throw err;
+    }
+    return [null, err?.response?.data?.errors];
   }
 };
