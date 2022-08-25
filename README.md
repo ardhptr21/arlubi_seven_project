@@ -1,4 +1,9 @@
-# Arlubi Seven - EPIM TI 2022
+<center>
+
+# Arlubi Seven - SMK N 7 Semarang
+EPIM - TI 2022
+
+</center>
 
 ## Team
 1. Ardhi Putra Pradana (Ketua)
