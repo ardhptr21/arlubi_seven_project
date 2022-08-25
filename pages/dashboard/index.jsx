@@ -5,20 +5,26 @@ import { HiOutlineUser } from 'react-icons/hi';
 import { AiOutlineNotification, AiOutlineDashboard } from 'react-icons/ai';
 import { authenticatedAdmin } from 'middleware/auth';
 import prisma from '@/lib/prisma';
+import Head from 'next/head';
 
 export default function Dashboard({ users, extracurriculars, requests }) {
   return (
-    <LayoutDashboard
-      description="Kelola dan lihat beberapa ringkasan statistik di dashboard"
-      title="Dashboard"
-      icon={AiOutlineDashboard}
-    >
-      <section className="grid md:grid-cols-3 gap-5 grid-cols-1">
-        <CardStat icon={VscOrganization} title="Total Ekstrakulikuler" value={extracurriculars} />
-        <CardStat icon={HiOutlineUser} title="Jumlah User" value={users} />
-        <CardStat icon={AiOutlineNotification} title="Permintaan Menunggu" value={requests} />
-      </section>
-    </LayoutDashboard>
+    <>
+      <Head>
+        <title>Dashboard</title>
+      </Head>
+      <LayoutDashboard
+        description="Kelola dan lihat beberapa ringkasan statistik di dashboard"
+        title="Dashboard"
+        icon={AiOutlineDashboard}
+      >
+        <section className="grid md:grid-cols-3 gap-5 grid-cols-1">
+          <CardStat icon={VscOrganization} title="Total Ekstrakulikuler" value={extracurriculars} />
+          <CardStat icon={HiOutlineUser} title="Jumlah User" value={users} />
+          <CardStat icon={AiOutlineNotification} title="Permintaan Menunggu" value={requests} />
+        </section>
+      </LayoutDashboard>
+    </>
   );
 }
 

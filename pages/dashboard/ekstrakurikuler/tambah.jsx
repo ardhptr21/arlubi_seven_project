@@ -6,6 +6,7 @@ import LayoutDashboard from '@/components/layout/LayoutDashboard';
 import { addExtraCurricular } from 'api/extracurricular';
 import { uploadImage } from 'api/image';
 import { authenticatedAdmin } from 'middleware/auth';
+import Head from 'next/head';
 import { useRef, useState } from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { toast } from 'react-toastify';
@@ -70,82 +71,87 @@ export default function Create() {
   };
 
   return (
-    <LayoutDashboard
-      title="Tambah Ekstrakurikuler"
-      description="Tambahkan beberapa ekstrakurikuler baru ke sistem"
-      icon={AiOutlinePlus}
-    >
-      <form className="space-y-5 max-w-4xl mx-auto" onSubmit={handleSubmit}>
-        <Input
-          title="Nama Ekstrakurikuler"
-          name="name"
-          type="text"
-          placeholder="Masukkan nama ekstrakurikuler"
-          className="w-full"
-          error={errors?.name}
-          value={ecData.name}
-          onChange={handleChange}
-          disabled={loading}
-        />
-        <Textarea
-          name="short"
-          title="Deskripsi singkat ekstrakurikuler"
-          placeholder="Masukkan deskripsi singkat"
-          className="resize-none h-48"
-          error={errors?.short}
-          value={ecData.short}
-          onChange={handleChange}
-          disabled={loading}
-        ></Textarea>
-        <QuillEditor
-          title="Isi konten ekstrakurikuler"
-          readOnly={loading}
-          value={content}
-          error={errors?.long}
-          onChange={(val) => setContent(val)}
-        />
-
-        <div>
+    <>
+      <Head>
+        <title>Dashboard | Tambah Ekstrakurikuler</title>
+      </Head>
+      <LayoutDashboard
+        title="Tambah Ekstrakurikuler"
+        description="Tambahkan beberapa ekstrakurikuler baru ke sistem"
+        icon={AiOutlinePlus}
+      >
+        <form className="space-y-5 max-w-4xl mx-auto" onSubmit={handleSubmit}>
           <Input
-            name="card_image"
-            title="Card image ekstrakurikuler"
-            type="file"
-            ref={card_image_ref}
+            title="Nama Ekstrakurikuler"
+            name="name"
+            type="text"
+            placeholder="Masukkan nama ekstrakurikuler"
             className="w-full"
+            error={errors?.name}
+            value={ecData.name}
+            onChange={handleChange}
             disabled={loading}
-            onChange={(e) => setCard_image(e.target.files[0])}
           />
-          {card_image && (
-            <div
-              className="aspect-video overflow-hidden bg-cover bg-center relative mt-5 rounded-xl bg w-96 bg-gray-200"
-              style={{ backgroundImage: `url(${URL.createObjectURL(card_image)})` }}
-            ></div>
-          )}
-        </div>
-
-        <div>
-          <Input
-            name="header_image"
-            title="Header image ekstrakurikuler"
-            type="file"
-            ref={header_image_ref}
-            className="w-full"
+          <Textarea
+            name="short"
+            title="Deskripsi singkat ekstrakurikuler"
+            placeholder="Masukkan deskripsi singkat"
+            className="resize-none h-48"
+            error={errors?.short}
+            value={ecData.short}
+            onChange={handleChange}
             disabled={loading}
-            onChange={(e) => setHeader_image(e.target.files[0])}
+          ></Textarea>
+          <QuillEditor
+            title="Isi konten ekstrakurikuler"
+            readOnly={loading}
+            value={content}
+            error={errors?.long}
+            onChange={(val) => setContent(val)}
           />
-          {header_image && (
-            <div
-              className="aspect-[21/9] bg-cover bg-center mt-5 rounded-xl bg w-full bg-gray-200"
-              style={{ backgroundImage: `url(${URL.createObjectURL(header_image)})` }}
-            ></div>
-          )}
-        </div>
 
-        <ButtonFill type="submit" disabled={loading}>
-          {loading ? 'Loading...' : 'Tambah'}
-        </ButtonFill>
-      </form>
-    </LayoutDashboard>
+          <div>
+            <Input
+              name="card_image"
+              title="Card image ekstrakurikuler"
+              type="file"
+              ref={card_image_ref}
+              className="w-full"
+              disabled={loading}
+              onChange={(e) => setCard_image(e.target.files[0])}
+            />
+            {card_image && (
+              <div
+                className="aspect-video overflow-hidden bg-cover bg-center relative mt-5 rounded-xl bg w-96 bg-gray-200"
+                style={{ backgroundImage: `url(${URL.createObjectURL(card_image)})` }}
+              ></div>
+            )}
+          </div>
+
+          <div>
+            <Input
+              name="header_image"
+              title="Header image ekstrakurikuler"
+              type="file"
+              ref={header_image_ref}
+              className="w-full"
+              disabled={loading}
+              onChange={(e) => setHeader_image(e.target.files[0])}
+            />
+            {header_image && (
+              <div
+                className="aspect-[21/9] bg-cover bg-center mt-5 rounded-xl bg w-full bg-gray-200"
+                style={{ backgroundImage: `url(${URL.createObjectURL(header_image)})` }}
+              ></div>
+            )}
+          </div>
+
+          <ButtonFill type="submit" disabled={loading}>
+            {loading ? 'Loading...' : 'Tambah'}
+          </ButtonFill>
+        </form>
+      </LayoutDashboard>
+    </>
   );
 }
 

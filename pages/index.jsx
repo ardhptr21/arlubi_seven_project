@@ -8,6 +8,7 @@ import { BiSearchAlt } from 'react-icons/bi';
 import debounce from '@/utils/debounce';
 import { useState } from 'react';
 import AlertInfo from '@/components/alert/AlertInfo';
+import Head from 'next/head';
 
 export default function Home({ extracurriculars }) {
   const [ecs, setEcs] = useState(extracurriculars);
@@ -24,53 +25,58 @@ export default function Home({ extracurriculars }) {
   };
 
   return (
-    <LayoutBase>
-      <Section>
-        <Hero
-          title="Temukan Ekstrakurikuler Favoritmu"
-          detail="Temukan lebih banyak teman dan koneksi"
-          image="/assets/images/home-hero-image.svg"
-          width={1200}
-          height={1200}
-        />
-      </Section>
-      <Section className="mt-10">
-        <Input
-          onChange={debounce(handleChange, 500)}
-          spellingcheck="false"
-          type="search"
-          icon={BiSearchAlt}
-          placeholder="Cari ekstrakurikuler yang sesuai"
-          className="focus:outline-2 focus:shadow-indigo-300"
-        />
+    <>
+      <Head>
+        <title>Arlubi Seven - Ekstrakurikuler</title>
+      </Head>
+      <LayoutBase>
+        <Section>
+          <Hero
+            title="Temukan Ekstrakurikuler Favoritmu"
+            detail="Temukan lebih banyak teman dan koneksi"
+            image="/assets/images/home-hero-image.svg"
+            width={1200}
+            height={1200}
+          />
+        </Section>
+        <Section className="mt-10">
+          <Input
+            onChange={debounce(handleChange, 500)}
+            spellingcheck="false"
+            type="search"
+            icon={BiSearchAlt}
+            placeholder="Cari ekstrakurikuler yang sesuai"
+            className="focus:outline-2 focus:shadow-indigo-300"
+          />
 
-        {search && (
-          <p className="mt-5 text-gray-600">
-            Hasil pencarian untuk: <span className="italic">{search}</span>
-          </p>
-        )}
-      </Section>
-      <Section>
-        {ecs.length ? (
-          <div className="grid md:grid-cols-2 grid-cols-1 mt-10 gap-5">
-            {ecs.map((ec) => (
-              <CardEC
-                name={ec.name}
-                href={`/ekstrakurikuler/${ec.slug}`}
-                image={ec.card_image}
-                members="10"
-                short={ec.short}
-                key={ec.id}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="mt-10">
-            <AlertInfo text="Ekstrakurikuler kosong atau tidak ditemukan" />
-          </div>
-        )}
-      </Section>
-    </LayoutBase>
+          {search && (
+            <p className="mt-5 text-gray-600">
+              Hasil pencarian untuk: <span className="italic">{search}</span>
+            </p>
+          )}
+        </Section>
+        <Section>
+          {ecs.length ? (
+            <div className="grid md:grid-cols-2 grid-cols-1 mt-10 gap-5">
+              {ecs.map((ec) => (
+                <CardEC
+                  name={ec.name}
+                  href={`/ekstrakurikuler/${ec.slug}`}
+                  image={ec.card_image}
+                  members="10"
+                  short={ec.short}
+                  key={ec.id}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="mt-10">
+              <AlertInfo text="Ekstrakurikuler kosong atau tidak ditemukan" />
+            </div>
+          )}
+        </Section>
+      </LayoutBase>
+    </>
   );
 }
 

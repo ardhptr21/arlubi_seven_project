@@ -31,3 +31,12 @@ export const addExtraCurricular = async (extracurricular) => {
     return [null, err?.response?.data?.errors];
   }
 };
+
+export const deleteExtraCurricular = async (id) => {
+  try {
+    const res = await axios.delete(`${BASE_API_URL}/api/extracurriculars/${id}`);
+    return res.data.data;
+  } catch (err) {
+    throw err;
+  }
+};

@@ -62,7 +62,7 @@ const handlerPUT = async (req, res) => {
   try {
     const user = await prisma.user.update({
       where: { id },
-      data: { name, class: userClass, nis: parseInt(nis) },
+      data: { name, class: userClass, nis },
     });
     return res.status(200).json({ status: 'success', data: user });
   } catch (err) {

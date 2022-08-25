@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { getRequests } from 'api/request';
 import CardRequest from '@/components/card/CardRequest';
 import AlertInfo from '@/components/alert/AlertInfo';
+import Head from 'next/head';
 
 export default function Request() {
   const [requests, setRequests] = useState([]);
@@ -17,21 +18,26 @@ export default function Request() {
   }, []);
 
   return (
-    <LayoutDashboard
-      title="Request"
-      description="Kelola semua permintaan ekstrakurikuler yang masuk"
-      icon={AiOutlineNotification}
-    >
-      {requests.length ? (
-        <>
-          {requests.map((req, idx) => (
-            <CardRequest requests={requests} setRequests={setRequests} key={idx} request={req} />
-          ))}
-        </>
-      ) : (
-        <AlertInfo text="Tidak ada permintaan untuk saat ini" />
-      )}
-    </LayoutDashboard>
+    <>
+      <Head>
+        <title>Dashboard | Request</title>
+      </Head>
+      <LayoutDashboard
+        title="Request"
+        description="Kelola semua permintaan ekstrakurikuler yang masuk"
+        icon={AiOutlineNotification}
+      >
+        {requests.length ? (
+          <>
+            {requests.map((req, idx) => (
+              <CardRequest requests={requests} setRequests={setRequests} key={idx} request={req} />
+            ))}
+          </>
+        ) : (
+          <AlertInfo text="Tidak ada permintaan untuk saat ini" />
+        )}
+      </LayoutDashboard>
+    </>
   );
 }
 

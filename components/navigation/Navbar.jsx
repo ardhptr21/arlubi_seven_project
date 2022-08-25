@@ -19,7 +19,7 @@ export default function Navbar() {
         </Link>
         <div className="space-x-5">
           {status !== 'authenticated' ? (
-            <>
+            <div className="flex gap-5">
               <Link href="/auth/masuk">
                 <a>
                   <ButtonFill>Masuk</ButtonFill>
@@ -30,18 +30,18 @@ export default function Navbar() {
                   <ButtonOutline>Daftar</ButtonOutline>
                 </a>
               </Link>
-            </>
+            </div>
           ) : (
             <div className="flex gap-5 items-center">
               <div className="flex justify-center items-center gap-3">
-                {session.user.role !== 'admin' ? (
+                {session.user.image ? (
                   <div
                     style={{ backgroundImage: `url(${session.user.image})` }}
                     className="h-12 w-12 bg-gray-200 rounded-full bg-cover bg-center"
                   ></div>
                 ) : (
-                  <div className="h-12 w-12 bg-blue-200 rounded-full bg-cover bg-center text-3xl justify-center items-center flex font-bold">
-                    A
+                  <div className="h-12 w-12 bg-blue-200 rounded-full text-3xl justify-center items-center flex font-bold">
+                    {session.user.name[0]}
                   </div>
                 )}
                 <div className="-space-y-1 hidden md:block">
