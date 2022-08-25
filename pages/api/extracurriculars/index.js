@@ -26,15 +26,19 @@ const handler = async (req, res) => {
  * @param {import('next').NextApiResponse} res
  */
 const handlerGET = async (req, res) => {
-  const { s } = req.query;
+  const { s, user_id } = req.query;
   try {
-    const extracurriculars = await prisma.extracurricular.findMany({
+    let query = {
       where: {
-        name: {
-          contains: s,
-        },
+        name: { contains: s },
       },
-    });
+    };
+    if (user_id) {
+      query.where = { ...query.where, users: { some: { user: { id: user_id } } } };
+      query = { ...query, include: { users: { where: { user: { id: user_id } }, select: { status: true } } } };
+    }
+
+    const extracurriculars = await prisma.extracurricular.findMany(query);
     return res.status(200).json({ status: 'success', data: extracurriculars });
   } catch (err) {
     return res.status(500).json({ status: 'error', message: err.message });

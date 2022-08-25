@@ -13,7 +13,6 @@ export default function CardEC({ name, members, short, image, href = '#' }) {
           </div>
           <div>
             <h3 className="text-xl font-bold text-gray-800 group-hover:text-gray-900">{name}</h3>
-            <p className="text-gray-600 group-hover:text-gray-700">{members} members</p>
           </div>
         </div>
 

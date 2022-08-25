@@ -2,9 +2,9 @@ import axios from 'axios';
 
 const BASE_API_URL = process.env.BASE_API_URL || 'http://localhost:3000';
 
-export const getExtracurriculars = async () => {
+export const getExtracurriculars = async (s = '', user_id = '') => {
   try {
-    const res = await axios.get(`${BASE_API_URL}/api/extracurriculars`);
+    const res = await axios.get(`${BASE_API_URL}/api/extracurriculars?s=${s}&user_id=${user_id}`);
     return res.data.data;
   } catch (err) {
     throw err;

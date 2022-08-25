@@ -8,6 +8,7 @@ import {
   AiOutlineHome,
   AiOutlineDashboard,
 } from 'react-icons/ai';
+import { ImMakeGroup } from 'react-icons/im';
 import LeftBarItem from './LeftBarItem';
 
 export default function LeftBar() {
@@ -29,6 +30,9 @@ export default function LeftBar() {
               )}
               <li>
                 <LeftBarItem name="Setelan" href="/dashboard/setelan" icon={FiSettings} />
+              </li>
+              <li>
+                <LeftBarItem name="Ekstrakurikuler" href="/dashboard/ekstrakurikuler" icon={ImMakeGroup} />
               </li>
               {session?.user?.role === 'admin' && (
                 <>
