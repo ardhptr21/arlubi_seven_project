@@ -20,18 +20,18 @@ export default function CardRequest({ request, requests, setRequests }) {
 
   return (
     <div className="p-6 bg-white border-2 border-gray-200 rounded-lg mb-4">
-      <div className="flex gap-5 justify-between h-full">
+      <div className="flex gap-5 flex-col md:flex-row justify-between h-full">
         <div className="flex items-start gap-5 w-full" style={{ flex: 1 }}>
           <div className="h-14 w-14 text-blue-600 bg-indigo-100 rounded-full"></div>
 
           <div>
-            <h3 className="text-3xl font-bold text-gray-900">{request.user.name}</h3>
-            <p className="text-sm text-gray-400">{request.user.class}</p>
+            <h3 className="md:text-3xl mb-2 text-2xl font-bold text-gray-800">{request.user.name}</h3>
+            <p className="md:text-sm text-xs text-gray-600">{request.user.class}</p>
           </div>
         </div>
         <div className="w-[1px] h-auto bg-gray-200"></div>
         <div className="w-full" style={{ flex: 1 }}>
-          <p className="text-sm text-gray-400">Ingin Bergabung :</p>
+          <p className="text-sm text-gray-600">Ingin Bergabung :</p>
           <h3 className="font-bold">{request.extracurricular.name}</h3>
         </div>
       </div>

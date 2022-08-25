@@ -21,7 +21,7 @@ export default function Ekstrakurikuler({ extracurriculars }) {
         <TabItem onClick={() => setTabActive('pending')} active={tabActive == 'pending'} text="Menunggu" />
       </TabContainer>
 
-      <div className="mt-10 grid gap-5 grid-cols-2">
+      <div className="mt-10 grid gap-5 md:grid-cols-2 grid-cols-1">
         {extracurriculars
           .filter((ec) => ec.users[0].status === tabActive)
           .map((ec) => (

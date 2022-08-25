@@ -15,47 +15,48 @@ export default function LeftBar() {
   const { data: session } = useSession();
 
   return (
-    <div className="flex flex-col justify-between w-16 py-10 h-screen bg-white border-r">
-      <div>
-        <div>
-          <nav className="flex flex-col p-2">
-            <ul className="space-y-5">
+    <div className="flex flex-row md:flex-col bg-white md:py-10 z-50 justify-between fixed md:relative md:w-16 bottom-0 w-screen md:h-screen md:border-r border-t md:border-t-0">
+      <nav className="p-2 w-full h-full">
+        <ul className="flex md:flex-col md:space-y-5 items-center justify-between w-full">
+          <li>
+            <LeftBarItem name="Beranda" href="/" icon={AiOutlineHome} />
+          </li>
+          {session?.user?.role === 'admin' && (
+            <li>
+              <LeftBarItem name="Dashboard" href="/dashboard" icon={AiOutlineDashboard} />
+            </li>
+          )}
+          <li>
+            <LeftBarItem name="Setelan" href="/dashboard/setelan" icon={FiSettings} />
+          </li>
+          {session?.user?.role !== 'admin' && (
+            <li>
+              <LeftBarItem name="Ekstrakurikuler" href="/dashboard/ekstrakurikuler" icon={ImMakeGroup} />
+            </li>
+          )}
+          {session?.user?.role === 'admin' && (
+            <>
               <li>
-                <LeftBarItem name="Beranda" href="/" icon={AiOutlineHome} />
-              </li>
-              {session?.user?.role === 'admin' && (
-                <li>
-                  <LeftBarItem name="Dashboard" href="/dashboard" icon={AiOutlineDashboard} />
-                </li>
-              )}
-              <li>
-                <LeftBarItem name="Setelan" href="/dashboard/setelan" icon={FiSettings} />
+                <LeftBarItem name="Request" href="/dashboard/request" icon={AiOutlineNotification} />
               </li>
               <li>
-                <LeftBarItem name="Ekstrakurikuler" href="/dashboard/ekstrakurikuler" icon={ImMakeGroup} />
+                <LeftBarItem
+                  name="Tambah Ekstrakurikuler"
+                  href="/dashboard/ekstrakurikuler/tambah"
+                  icon={AiOutlinePlus}
+                />
               </li>
-              {session?.user?.role === 'admin' && (
-                <>
-                  <li>
-                    <LeftBarItem name="Request" href="/dashboard/request" icon={AiOutlineNotification} />
-                  </li>
-                  <li>
-                    <LeftBarItem
-                      name="Tambah Ekstrakurikuler"
-                      href="/dashboard/ekstrakurikuler/tambah"
-                      icon={AiOutlinePlus}
-                    />
-                  </li>
-                </>
-              )}
-            </ul>
-          </nav>
-        </div>
-      </div>
+            </>
+          )}
+          <li className="block md:hidden" onClick={() => signOut({ callbackUrl: '/' })}>
+            <LeftBarItem name="Keluar" icon={AiOutlineLogout} />
+          </li>
+        </ul>
+      </nav>
 
       <div
         onClick={() => signOut({ callbackUrl: '/' })}
-        className="sticky inset-x-0 bottom-0 p-2 bg-white border-t border-gray-100"
+        className="inset-x-0 bottom-0 p-2 border-t border-gray-100 hidden md:block"
       >
         <LeftBarItem name="Keluar" icon={AiOutlineLogout} />
       </div>

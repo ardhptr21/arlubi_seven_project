@@ -29,7 +29,7 @@ export default function QuillEditor({ title, error, ...props }) {
         {error && <small className="text-red-500">{error}</small>}
       </div>
       <div className="relative">
-        <div className="max-h-96 overflow-y-auto pt-10" ref={scrollRef}>
+        <div className="max-h-96 overflow-y-auto pt-20 md:pt-10" ref={scrollRef}>
           <ReactQuill theme="snow" {...props} modules={modules} onKeyDown={handleInput} />
         </div>
       </div>

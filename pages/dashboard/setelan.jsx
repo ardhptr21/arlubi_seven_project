@@ -92,7 +92,7 @@ export default function Setelan({ user }) {
 
   return (
     <LayoutDashboard title="Setelan" description="Atur dan kelola informasi data dirimu" icon={FiSettings}>
-      <div className="flex max-w-3xl mx-auto gap-16 justify-between w-full items-start">
+      <div className="flex flex-col-reverse md:flex-row max-w-3xl mx-auto gap-16 justify-between w-full items-start">
         <form className="space-y-5 w-full" onSubmit={handleSubmit}>
           {user.role === 'user' && (
             <>
@@ -183,7 +183,7 @@ export default function Setelan({ user }) {
           </ButtonFill>
         </form>
         {user.role === 'user' && (
-          <div>
+          <div className="flex justify-center items-center w-full">
             <label htmlFor="photo" className="cursor-pointer">
               <div
                 className="h-52 w-52 rounded-full bg-cover bg-center bg-gray-200"

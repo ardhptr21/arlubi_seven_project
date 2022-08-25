@@ -26,7 +26,7 @@ export default function DetailEkstrakurikuler({ extracurricular, user }) {
 
   return (
     <LayoutBase>
-      <Section className="flex gap-10 justify-center items-start">
+      <Section className="flex relative flex-col md:flex-row gap-10 justify-center items-start">
         <div className="w-full" style={{ flex: 3 }}>
           <div>
             <Hero
@@ -41,7 +41,7 @@ export default function DetailEkstrakurikuler({ extracurricular, user }) {
             className="mt-5 prose-base prose-ul:list-disc prose-ol:list-decimal prose-headings:font-bold prose-headings:text-gray-800 prose-p:text-gray-600"
           ></div>
         </div>
-        <div className="border-2 p-5 border-gray-200 space-y-8 rounded-xl w-full" style={{ flex: 1 }}>
+        <div className="border-2 p-5 border-gray-200 space-y-8 rounded-xl w-full sticky top-5" style={{ flex: 1 }}>
           <div>
             <p className="text-sm font-bold">ANGGOTA</p>
             <div className="mt-5 space-y-3">

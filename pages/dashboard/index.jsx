@@ -12,7 +12,7 @@ export default function Dashboard() {
       title="Dashboard"
       icon={AiOutlineDashboard}
     >
-      <section className="grid grid-cols-3 gap-5">
+      <section className="grid md:grid-cols-3 gap-5 grid-cols-1">
         <CardStat icon={VscOrganization} title="Total Ekstrakulikuler" value="12" />
         <CardStat icon={HiOutlineUser} title="Jumlah User" value="56" />
         <CardStat icon={AiOutlineNotification} title="Permintaan Menunggu" value="12" />
