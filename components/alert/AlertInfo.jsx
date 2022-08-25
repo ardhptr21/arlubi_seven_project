@@ -1,8 +1,11 @@
+import { BsInfoCircleFill } from 'react-icons/bs';
+
 export default function AlertInfo({ text }) {
-    return (
-      <div className="p-2 text-blue-700 border rounded border-blue-900/10 bg-blue-50 text-center " role="alert">
-        <strong className="text-lg font-medium">{text}</strong>
-      </div>
-    );
-  }
-  
+  return (
+    <div className="flex items-center gap-4 p-4 border-2 border-blue-500 text-gray-900 rounded-xl" role="alert">
+      <BsInfoCircleFill className="text-blue-500" />
+
+      <strong className="text-sm font-semibold text-blue-500"> {text} </strong>
+    </div>
+  );
+}

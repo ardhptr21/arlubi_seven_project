@@ -1,7 +1,11 @@
+import { AiFillWarning } from 'react-icons/ai';
+
 export default function AlertWarning({ text }) {
   return (
-    <div className="p-2 text-yellow-700 border rounded border-yellow-900/10 bg-yellow-50 text-center " role="alert">
-      <strong className="text-lg font-medium">{text}</strong>
+    <div className="flex items-center gap-4 p-4 border-2 border-yellow-500 text-gray-900 rounded-xl" role="alert">
+      <AiFillWarning className="text-yellow-500" />
+
+      <strong className="text-sm font-semibold text-yellow-500"> {text} </strong>
     </div>
   );
 }

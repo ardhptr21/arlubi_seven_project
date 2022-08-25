@@ -11,7 +11,7 @@ export default function Textarea({ title, name, className, type = 'text', icon, 
           type={type}
           id={name}
           name={name}
-          className={`w-full disabled:bg-gray-200 resize-x-none p-4 pr-12 text-sm border border-gray-200 rounded-lg shadow-sm${
+          className={`w-full disabled:bg-gray-200 focus:outline-2 focus:outline-indigo-600 outline-none resize-x-none p-4 pr-12 text-sm border border-gray-200 rounded-lg shadow-sm${
             className ? ` ${className}` : ''
           }`}
         ></textarea>

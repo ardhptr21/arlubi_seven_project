@@ -1,7 +1,11 @@
+import { BsCheckCircleFill } from 'react-icons/bs';
+
 export default function AlertSuccess({ text }) {
   return (
-    <div className="p-2 text-green-700 border rounded border-green-900/10 bg-green-50 text-center " role="alert">
-      <strong className="text-lg font-medium">{text}</strong>
+    <div className="flex items-center gap-4 p-4 border-2 border-green-500 text-gray-900 rounded-xl" role="alert">
+      <BsCheckCircleFill className="text-green-500" />
+
+      <strong className="text-sm font-semibold text-green-500"> {text} </strong>
     </div>
   );
 }

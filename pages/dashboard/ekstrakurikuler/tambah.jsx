@@ -6,7 +6,7 @@ import LayoutDashboard from '@/components/layout/LayoutDashboard';
 import { addExtraCurricular } from 'api/extracurricular';
 import { uploadImage } from 'api/image';
 import { authenticatedAdmin } from 'middleware/auth';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { toast } from 'react-toastify';
 
@@ -16,7 +16,11 @@ export default function Create() {
     short: '',
   });
   const [header_image, setHeader_image] = useState(null);
+  const header_image_ref = useRef();
+
   const [card_image, setCard_image] = useState(null);
+  const card_image_ref = useRef();
+
   const [content, setContent] = useState('');
   const [errors, setErrors] = useState(null);
   const [loading, setIsLoading] = useState(false);
@@ -51,6 +55,10 @@ export default function Create() {
         short: '',
       });
       setContent('');
+      header_image_ref.current.value = null;
+      card_image_ref.current.value = null;
+      setCard_image(null);
+      setHeader_image(null);
     }
   };
 
@@ -102,6 +110,7 @@ export default function Create() {
             name="card_image"
             title="Card image ekstrakurikuler"
             type="file"
+            ref={card_image_ref}
             className="w-full"
             disabled={loading}
             onChange={(e) => setCard_image(e.target.files[0])}
@@ -119,6 +128,7 @@ export default function Create() {
             name="header_image"
             title="Header image ekstrakurikuler"
             type="file"
+            ref={header_image_ref}
             className="w-full"
             disabled={loading}
             onChange={(e) => setHeader_image(e.target.files[0])}

@@ -28,14 +28,12 @@ export default function DetailEkstrakurikuler({ extracurricular, user }) {
     <LayoutBase>
       <Section className="flex relative flex-col md:flex-row gap-10 justify-center items-start">
         <div className="w-full" style={{ flex: 3 }}>
-          <div>
-            <Hero
-              style={{ backgroundImage: `url(${extracurricular.header_image})` }}
-              overlay={true}
-              title={extracurricular.name}
-              detail={extracurricular.short}
-            />
-          </div>
+          <Hero
+            style={{ backgroundImage: `url(${extracurricular.header_image})` }}
+            overlay={true}
+            title={extracurricular.name}
+            detail={extracurricular.short}
+          />
           <div
             dangerouslySetInnerHTML={{ __html: extracurricular.long }}
             className="mt-5 prose-base prose-ul:list-disc prose-ol:list-decimal prose-headings:font-bold prose-headings:text-gray-800 prose-p:text-gray-600"
@@ -44,10 +42,16 @@ export default function DetailEkstrakurikuler({ extracurricular, user }) {
         <div className="border-2 p-5 border-gray-200 space-y-8 rounded-xl w-full sticky top-5" style={{ flex: 1 }}>
           <div>
             <p className="text-sm font-bold">ANGGOTA</p>
-            <div className="mt-5 space-y-3">
-              {extracurricular.users.map(({ user }, idx) => (
-                <CardUser data={user} key={idx} />
-              ))}
+            <div className="mt-5 space-y-3 max-h-96 overflow-y-auto scrollbar-none">
+              {extracurricular?.users?.length ? (
+                <>
+                  {extracurricular.users.map(({ user }, idx) => (
+                    <CardUser data={user} key={idx} />
+                  ))}
+                </>
+              ) : (
+                <AlertInfo text="Daftar anggota kosong" />
+              )}
             </div>
           </div>
           {user && user.role !== 'admin' && (
