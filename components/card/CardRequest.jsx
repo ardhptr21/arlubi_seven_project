@@ -2,13 +2,15 @@ import { changeStatus } from 'api/request';
 import ButtonFill from '../button/ButtonFill';
 import { toast } from 'react-toastify';
 
-export default function CardRequest({ request, setRequests }) {
+export default function CardRequest({ request, requests, setRequests }) {
   const handleAccept = async () => {
     const isConfirm = window.confirm('Apakah anda yakin ingin menerima permintaan ini?');
     if (!isConfirm) return false;
     try {
       const data = await changeStatus(request.user_id, request.extracurricular_id, 'accepted');
-      setRequests((req) => req.filter((r) => r.user_id !== data.user_id && r.extracurricular_id !== data.extracurricular_id));
+      setRequests(
+        requests.filter((req) => !(req.user_id === data.user_id && req.extracurricular_id === data.extracurricular_id))
+      );
       toast.success('Permintaan berhasil diterima');
     } catch (err) {
       toast.success('Permintaan gagal diterima');

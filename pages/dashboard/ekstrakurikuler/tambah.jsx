@@ -5,8 +5,7 @@ import Textarea from '@/components/form/Textarea';
 import LayoutDashboard from '@/components/layout/LayoutDashboard';
 import { addExtraCurricular } from 'api/extracurricular';
 import { uploadImage } from 'api/image';
-import { authenticated } from 'middleware/auth';
-import Image from 'next/image';
+import { authenticatedAdmin } from 'middleware/auth';
 import { useState } from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { toast } from 'react-toastify';
@@ -140,4 +139,4 @@ export default function Create() {
   );
 }
 
-export const getServerSideProps = authenticated(async () => ({ props: {} }));
+export const getServerSideProps = authenticatedAdmin(async () => ({ props: {} }));

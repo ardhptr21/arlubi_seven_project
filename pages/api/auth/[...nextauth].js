@@ -21,15 +21,15 @@ const options = {
       let userFind = await prisma.user.findUnique({ where: { id: token.sub } });
       session.user.id = userFind.id;
       session.user.email = userFind.email;
+      session.user.role = userFind.role;
 
-      if (userFind.role) {
-        session.user.role = userFind.role;
-      } else {
+      if (userFind.role !== 'admin') {
         session.user.name = userFind.name;
         session.user.class = userFind.class;
         session.user.nis = userFind.nis;
         session.user.image = userFind.image;
       }
+
       return session;
     },
   },

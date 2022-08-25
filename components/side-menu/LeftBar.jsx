@@ -1,4 +1,6 @@
+import { signOut } from 'next-auth/react';
 import { FiSettings } from 'react-icons/fi';
+import { useSession } from 'next-auth/react';
 import {
   AiOutlineNotification,
   AiOutlinePlus,
@@ -6,10 +8,11 @@ import {
   AiOutlineHome,
   AiOutlineDashboard,
 } from 'react-icons/ai';
-import { VscOrganization } from 'react-icons/vsc';
 import LeftBarItem from './LeftBarItem';
 
 export default function LeftBar() {
+  const { data: session } = useSession();
+
   return (
     <div className="flex flex-col justify-between w-16 py-10 h-screen bg-white border-r">
       <div>
@@ -19,28 +22,37 @@ export default function LeftBar() {
               <li>
                 <LeftBarItem name="Beranda" href="/" icon={AiOutlineHome} />
               </li>
-              <li>
-                <LeftBarItem name="Dashboard" href="/dashboard" icon={AiOutlineDashboard} />
-              </li>
+              {session?.user?.role === 'admin' && (
+                <li>
+                  <LeftBarItem name="Dashboard" href="/dashboard" icon={AiOutlineDashboard} />
+                </li>
+              )}
               <li>
                 <LeftBarItem name="Setelan" href="/dashboard/setelan" icon={FiSettings} />
               </li>
-              <li>
-                <LeftBarItem name="Request" href="/dashboard/request" icon={AiOutlineNotification} />
-              </li>
-              <li>
-                <LeftBarItem
-                  name="Tambah Ekstrakurikuler"
-                  href="/dashboard/ekstrakurikuler/tambah"
-                  icon={AiOutlinePlus}
-                />
-              </li>
+              {session?.user?.role === 'admin' && (
+                <>
+                  <li>
+                    <LeftBarItem name="Request" href="/dashboard/request" icon={AiOutlineNotification} />
+                  </li>
+                  <li>
+                    <LeftBarItem
+                      name="Tambah Ekstrakurikuler"
+                      href="/dashboard/ekstrakurikuler/tambah"
+                      icon={AiOutlinePlus}
+                    />
+                  </li>
+                </>
+              )}
             </ul>
           </nav>
         </div>
       </div>
 
-      <div className="sticky inset-x-0 bottom-0 p-2 bg-white border-t border-gray-100">
+      <div
+        onClick={() => signOut({ callbackUrl: '/' })}
+        className="sticky inset-x-0 bottom-0 p-2 bg-white border-t border-gray-100"
+      >
         <LeftBarItem name="Keluar" icon={AiOutlineLogout} />
       </div>
     </div>

@@ -1,6 +1,6 @@
 import LayoutDashboard from '@/components/layout/LayoutDashboard';
 import { AiOutlineNotification } from 'react-icons/ai';
-import { authenticated } from 'middleware/auth';
+import { authenticatedAdmin } from 'middleware/auth';
 import { useEffect, useState } from 'react';
 import { getRequests } from 'api/request';
 import CardRequest from '@/components/card/CardRequest';
@@ -16,12 +16,16 @@ export default function Request() {
   }, []);
 
   return (
-    <LayoutDashboard title="Request" description="Kelola semua permintaan ekstrakurikuler yang masuk" icon={AiOutlineNotification}>
+    <LayoutDashboard
+      title="Request"
+      description="Kelola semua permintaan ekstrakurikuler yang masuk"
+      icon={AiOutlineNotification}
+    >
       {requests.map((req, idx) => (
-        <CardRequest setRequests={setRequests} key={idx} request={req} />
+        <CardRequest requests={requests} setRequests={setRequests} key={idx} request={req} />
       ))}
     </LayoutDashboard>
   );
 }
 
-export const getServerSideProps = authenticated(async () => ({ props: {} }));
+export const getServerSideProps = authenticatedAdmin(async () => ({ props: {} }));

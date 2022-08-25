@@ -47,3 +47,15 @@ export const uploadPhoto = async (formData, id) => {
     throw err;
   }
 };
+
+export const changePassword = async (credentials) => {
+  try {
+    const res = await axios.put(`${BASE_API_URL}/api/users/change_password`, credentials);
+    return [res.data.data, null];
+  } catch (err) {
+    if (!err?.response?.data?.errors) {
+      throw err;
+    }
+    return [null, err?.response?.data?.errors];
+  }
+};

@@ -11,10 +11,9 @@ export default function Navbar() {
       <nav className="flex justify-between">
         <Link href="/">
           <a className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-indigo-300"></div>
             <div>
-              <h2 className="font-bold text-gray-800">Ekstrakurikuler</h2>
-              <p className="text-gray-600 text-xs">1 Ekstrakurikuler</p>
+              <h2 className="text-2xl font-extrabold text-gray-800">Arlubi Seven</h2>
+              <p className="text-gray-600 text-xs">SMK Negeri 7 Semarang</p>
             </div>
           </a>
         </Link>
@@ -33,12 +32,25 @@ export default function Navbar() {
               </Link>
             </>
           ) : (
-            <Link href="/dashboard">
-              <a className="flex justify-center items-center gap-3">
-                <div className="h-12 w-12 bg-gray-200 rounded-full"></div>
-                <p className="font-medium">{session.user.name}</p>
-              </a>
-            </Link>
+            <div className="flex gap-5 items-center">
+              <div className="flex justify-center items-center gap-3">
+                {session.user.role === 'user' && (
+                  <div
+                    style={{ backgroundImage: `url(${session.user.image})` }}
+                    className="h-12 w-12 bg-gray-200 rounded-full bg-cover bg-center"
+                  ></div>
+                )}
+                <div className="-space-y-1">
+                  <p className="font-medium">{session.user.name}</p>
+                  {session.user.role === 'user' && <small className="text-xs block">{session.user.class}</small>}
+                </div>
+              </div>
+              <Link href={session.user.role === 'admin' ? '/dashboard' : '/dashboard/setelan'}>
+                <a>
+                  <ButtonFill>Dashboard</ButtonFill>
+                </a>
+              </Link>
+            </div>
           )}
         </div>
       </nav>

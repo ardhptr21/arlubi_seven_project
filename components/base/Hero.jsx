@@ -4,7 +4,7 @@ export default function Hero({ title, detail, image, width, height, overlay, ...
   return (
     <div
       {...props}
-      className="bg-gray-200 relative aspect-[21/9] w-full bg-cover bg-center px-10 z-10 rounded-xl flex-col md:flex-row overflow-hidden flex justify-between items-center"
+      className="bg-gray-200 relative aspect-[21/9] w-full bg-cover bg-center px-10 z-10 rounded-xl flex-col md:flex-row overflow-hidden flex justify-between items-center  "
     >
       {overlay && <div className="absolute inset-0 bg-black bg-opacity-50 -z-10"></div>}
       <div className="max-w-sm w-full py-10 text-center md:text-left">

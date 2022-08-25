@@ -19,6 +19,7 @@ const handler = async (req, res) => {
       },
       include: {
         users: {
+          where: { status: 'accepted' },
           include: {
             user: {
               select: {

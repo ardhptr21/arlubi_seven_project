@@ -3,10 +3,13 @@ import Section from '@/components/base/Section';
 import ButtonFill from '@/components/button/ButtonFill';
 import CardUser from '@/components/card/CardUser';
 import LayoutBase from '@/components/layout/LayoutBase';
+import AlertSuccess from '@/components/alert/AlertSuccess';
 import { getExtracurricular } from 'api/extracurricular';
 import { sendRequest } from 'api/useronec';
 import { getSession } from 'next-auth/react';
 import { useState } from 'react';
+import AlertWarning from '@/components/alert/AlertWarning';
+import AlertInfo from '@/components/alert/AlertInfo';
 
 export default function DetailEkstrakurikuler({ extracurricular, user }) {
   const [userEcStatus, setUserEcStatus] = useState(extracurricular.status);
@@ -47,19 +50,20 @@ export default function DetailEkstrakurikuler({ extracurricular, user }) {
               ))}
             </div>
           </div>
-          {user && (
+          {user && user.role !== 'admin' && (
             <div>
               <p className="text-sm font-bold">STATUS</p>
               <div className="mt-5">
                 {userEcStatus ? (
-                  <h5 className="border-2 border-yellow-500 bg-yellow-400 p-2 rounded-xl text-xl text-center capitalize text-white font-bold">
-                    {userEcStatus}
-                  </h5>
+                  <>
+                    {userEcStatus === 'pending' && <AlertWarning text="Menunggu" />}
+                    {userEcStatus === 'accepted' && <AlertSuccess text="Bergabung" />}
+                  </>
                 ) : (
                   <div>
-                    <p>Kamu belum bergabung dalam ekstrakurikuler ini</p>
+                    <AlertInfo text="Belum bergabung" />
                     <ButtonFill onClick={handleClick} className="w-full mt-3">
-                      Bergabung
+                      Gabung
                     </ButtonFill>
                   </div>
                 )}
