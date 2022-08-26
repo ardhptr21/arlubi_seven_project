@@ -23,7 +23,12 @@ export default function CardRequest({ request, requests, setRequests }) {
     <div className="p-6 bg-white border-2 border-gray-200 rounded-lg mb-4">
       <div className="flex gap-5 flex-col md:flex-row justify-between h-full">
         <div className="flex items-start gap-5 w-full" style={{ flex: 1 }}>
-          <div className="h-14 w-14 text-blue-600 bg-indigo-100 rounded-full"></div>
+          <div
+            className="h-14 w-14 text-blue-600 bg-gray-200 bg-cover bg-center rounded-full"
+            style={{
+              backgroundImage: `url(${request.user.image})`,
+            }}
+          ></div>
 
           <div>
             <h3 className="md:text-3xl mb-2 text-2xl font-bold text-gray-800">{request.user.name}</h3>

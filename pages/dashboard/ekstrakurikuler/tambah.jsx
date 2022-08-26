@@ -192,6 +192,7 @@ export default function Create({ ecWillUpdate }) {
               title="Card image ekstrakurikuler"
               type="file"
               ref={card_image_ref}
+              accept="image/*"
               className="w-full"
               disabled={loading}
               onChange={(e) => setCard_image(e.target.files[0])}
@@ -212,6 +213,7 @@ export default function Create({ ecWillUpdate }) {
               title="Header image ekstrakurikuler"
               type="file"
               ref={header_image_ref}
+              accept="image/*"
               className="w-full"
               disabled={loading}
               onChange={(e) => setHeader_image(e.target.files[0])}
