@@ -1,6 +1,7 @@
 import { changeStatus } from 'api/request';
 import ButtonFill from '../button/ButtonFill';
 import { toast } from 'react-toastify';
+import parseDate from '@/utils/parseDate';
 
 export default function CardRequest({ request, requests, setRequests }) {
   const handleAccept = async () => {
@@ -36,7 +37,7 @@ export default function CardRequest({ request, requests, setRequests }) {
         </div>
       </div>
       <div className="flex justify-between items-end">
-        <p className="text-sm">{request.created_at}</p>
+        <p className="text-sm">{parseDate(request.created_at)}</p>
         <ButtonFill className="mt-10" onClick={handleAccept}>
           Terima
         </ButtonFill>
