@@ -2,10 +2,12 @@ import axios from 'axios';
 
 const BASE_API_URL = process.env.BASE_API_URL || 'http://localhost:3000';
 
-export const getExtracurriculars = async (s = '', user_id = '') => {
+export const getExtracurriculars = async (s = '', user_id = '', page = 1, perPage = 4) => {
   try {
-    const res = await axios.get(`${BASE_API_URL}/api/extracurriculars?s=${s}&user_id=${user_id}`);
-    return res.data.data;
+    const res = await axios.get(
+      `${BASE_API_URL}/api/extracurriculars?s=${s}&user_id=${user_id}&page=${page}&perPage=${perPage}`
+    );
+    return res.data;
   } catch (err) {
     throw err;
   }

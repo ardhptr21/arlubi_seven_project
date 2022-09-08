@@ -78,5 +78,245 @@
     "long": "<p>Esktra ini adalah ekstra yang mendalami tentang kegiatan keagamaan.</p><p><br></p><p>Kegiatan yang ada di remas yaitu hadroh dan qiro` kegiatan remas qiro` diadakan setiap hari selasa sedangkan hadroh diadakan setiap hari kamis.</p><p><br></p><p>dalam pembelajaran qiro' di bimbing oleh guru yang di datangkan dari luar sekolahan yang mampu dan sanggup dalam membina siswa-siswi dalm membaca al-qu'an lebih baik dengan irama lagu yang bagus.</p><p><br></p><p>sedangkan hadroh ini di lakukan latihan sendiri dengan adanya peralatan yang sudah lengkap dan vokal yang bagus pula.</p>",
     "card_image": "https://i.ibb.co/vvCmcyP/remas-cad.jpg",
     "header_image": "https://i.ibb.co/HqwH3vX/remas-hder.jpg"
+  },
+  {
+    "name": "Memancing",
+    "slug": "memancing",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/VvWz37Z/fishing-lead.jpg",
+    "header_image": "https://i.ibb.co/BBJTdNg/4217355663.jpg"
+  },
+  {
+    "name": "Memanah",
+    "slug": "memanah",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/j57t2fq/17-jan-AL-IRSYAD-Ini-Dia-Manfaat-Memanah-bagi-Kesehatan.jpg",
+    "header_image": "https://i.ibb.co/yghPSmx/0-146r-1572497396413-640x360.jpg"
+  },
+  {
+    "name": "Renang",
+    "slug": "renang",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/7RXK0TH/renang-gaya-bebas.jpg",
+    "header_image": "https://i.ibb.co/7RXK0TH/renang-gaya-bebas.jpg"
+  },
+  {
+    "name": "Bulu Tangkis",
+    "slug": "bulu-tangkis",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/fdxRgC2/090288400-1518518551-Badminton-2.jpg",
+    "header_image": "https://i.ibb.co/fdxRgC2/090288400-1518518551-Badminton-2.jpg"
+  },
+  {
+    "name": "Bekel",
+    "slug": "bekel",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/KjZC924/budaya-belanda-pengaruhi-permainan-bola-bekel-di-indonesia.jpg",
+    "header_image": "https://i.ibb.co/KjZC924/budaya-belanda-pengaruhi-permainan-bola-bekel-di-indonesia.jpg"
+  },
+  {
+    "name": "Lari",
+    "slug": "lari",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/KyPxmZS/USMC-Marathon.jpg",
+    "header_image": "https://i.ibb.co/KyPxmZS/USMC-Marathon.jpg"
+  },
+  {
+    "name": "Jalan",
+    "slug": "jalan",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/6YNLfjh/1200px-2005-World-Championships-in-Athletics-3.jpg",
+    "header_image": "https://i.ibb.co/6YNLfjh/1200px-2005-World-Championships-in-Athletics-3.jpg"
+  },
+  {
+    "name": "Tidur",
+    "slug": "tidur",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/B4mC1Z9/ilustrasi-tidur-mendengkur-5-169.jpg",
+    "header_image": "https://i.ibb.co/B4mC1Z9/ilustrasi-tidur-mendengkur-5-169.jpg"
+  },
+  {
+    "name": "Makan",
+    "slug": "makan",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/yktDzFy/maxresdefault.jpg",
+    "header_image": "https://i.ibb.co/yktDzFy/maxresdefault.jpg"
+  },
+  {
+    "name": "Minum",
+    "slug": "minum",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/4tSPFkX/18082-inilah-3-tanda-anda-dehidrasi.jpg",
+    "header_image": "https://i.ibb.co/4tSPFkX/18082-inilah-3-tanda-anda-dehidrasi.jpg"
+  },
+  {
+    "name": "Melihat",
+    "slug": "melihat",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/2YpWvVM/lovepik-woman-looking-through-binoculars-picture-501461705.jpg",
+    "header_image": "https://i.ibb.co/2YpWvVM/lovepik-woman-looking-through-binoculars-picture-501461705.jpg"
+  },
+  {
+    "name": "Yang Tawu Tawu Ajah",
+    "slug": "yang-tawu-tawu-ajah",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/GPTSL3T/db936630a54f59bcbe44ceb595ee5029.jpg",
+    "header_image": "https://i.ibb.co/GPTSL3T/db936630a54f59bcbe44ceb595ee5029.jpg"
+  },
+  {
+    "name": "Menjadi Anime",
+    "slug": "menjadi-anime",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/Lk7LJvV/74ff2c2ed572317e14907c06c920cc16.jpg",
+    "header_image": "https://i.ibb.co/Lk7LJvV/74ff2c2ed572317e14907c06c920cc16.jpg"
+  },
+  {
+    "name": "Guraa",
+    "slug": "guraa",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/0ZbDcbs/images-q-tbn-ANd9-Gc-Q7-CXq-Dcbkk74y-R07-NT9e-Xy0-Mr-At-WGUdh25-Zlz-T1-ERMd-QS8s8e-Qw-Fh-Ys-GSnf-CQB.jpg",
+    "header_image": "https://i.ibb.co/0ZbDcbs/images-q-tbn-ANd9-Gc-Q7-CXq-Dcbkk74y-R07-NT9e-Xy0-Mr-At-WGUdh25-Zlz-T1-ERMd-QS8s8e-Qw-Fh-Ys-GSnf-CQB.jpg"
+  },
+  {
+    "name": "Kobokan",
+    "slug": "kobokan",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/6b1TMVz/407d3fe6-fccc-473e-ab64-d742ca257f23.png",
+    "header_image": "https://i.ibb.co/6b1TMVz/407d3fe6-fccc-473e-ab64-d742ca257f23.png"
+  },
+  {
+    "name": "Demon Lord",
+    "slug": "demon-lord",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/x2sXnYh/maxresdefault.jpg",
+    "header_image": "https://i.ibb.co/x2sXnYh/maxresdefault.jpg"
+  },
+  {
+    "name": "Supra",
+    "slug": "supra",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/RYpZJzb/88797-ilustrasi-toyota-supra-mk5.jpg",
+    "header_image": "https://i.ibb.co/RYpZJzb/88797-ilustrasi-toyota-supra-mk5.jpg"
+  },
+  {
+    "name": "Porsche",
+    "slug": "porsche",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/2dHv2db/perbandingan-harga-porsche-doni-salmanan-yang-disita-polisi-di-beberapa-negara-rqv.jpg",
+    "header_image": "https://i.ibb.co/2dHv2db/perbandingan-harga-porsche-doni-salmanan-yang-disita-polisi-di-beberapa-negara-rqv.jpg"
+  },
+  {
+    "name": "Pagani",
+    "slug": "pagani",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/1rm2SqP/pagani-huayra-nc-front-corner.jpg",
+    "header_image": "https://i.ibb.co/1rm2SqP/pagani-huayra-nc-front-corner.jpg"
+  },
+  {
+    "name": "Final Fantasy VII",
+    "slug": "final-fantasy-vii",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/wh3MSYZ/FFVIIR-Theme-Song.jpg",
+    "header_image": "https://i.ibb.co/wh3MSYZ/FFVIIR-Theme-Song.jpg"
+  },
+  {
+    "name": "Kasur",
+    "slug": "kasur",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/r2PsPQ5/10420796-1.jpg",
+    "header_image": "https://i.ibb.co/r2PsPQ5/10420796-1.jpg"
+  },
+  {
+    "name": "Bantal",
+    "slug": "bantal",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/4smc1dj/603c502025057.jpg",
+    "header_image": "https://i.ibb.co/4smc1dj/603c502025057.jpg"
+  },
+  {
+    "name": "Jedag Jedug",
+    "slug": "jedag-jedug",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/rQXDMwX/images-q-tbn-ANd9-Gc-QIo-WQhz-Huq-ATX2g-ODVd-HHbrfd-Q4g-Eq-Tyebo-A-usqp-CAU.jpg",
+    "header_image": "https://i.ibb.co/rQXDMwX/images-q-tbn-ANd9-Gc-QIo-WQhz-Huq-ATX2g-ODVd-HHbrfd-Q4g-Eq-Tyebo-A-usqp-CAU.jpg"
+  },
+  {
+    "name": "Sepatu",
+    "slug": "sepatu",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/k9YVNzh/027668700-1655969384-1-anam-chenel.jpg",
+    "header_image": "https://i.ibb.co/k9YVNzh/027668700-1655969384-1-anam-chenel.jpg"
+  },
+  {
+    "name": "Merangkak",
+    "slug": "merangkak",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/C6yjsjs/images-q-tbn-ANd9-Gc-TCLLwy-LXW9-REOo2-AT8-U-omt-Rq-YXkt6-OZN3hh-Hyntz-C5far-Hclc-Lvj-IYhl-Ml-Fhc3o9.jpg",
+    "header_image": "https://i.ibb.co/C6yjsjs/images-q-tbn-ANd9-Gc-TCLLwy-LXW9-REOo2-AT8-U-omt-Rq-YXkt6-OZN3hh-Hyntz-C5far-Hclc-Lvj-IYhl-Ml-Fhc3o9.jpg"
+  },
+  {
+    "name": "Jualan",
+    "slug": "jualan",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/9cxLjCM/bisnis-di-masa-pandemi-image-1.jpg",
+    "header_image": "https://i.ibb.co/9cxLjCM/bisnis-di-masa-pandemi-image-1.jpg"
+  },
+  {
+    "name": "Bermain HP",
+    "slug": "bermain-hp",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/vQKwjsz/5e1edb3e7d808.jpg",
+    "header_image": "https://i.ibb.co/vQKwjsz/5e1edb3e7d808.jpg"
+  },
+  {
+    "name": "Menggendong",
+    "slug": "menggendong",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/QfJGQBP/2105042-Pelajar-China-gendong-temannya-yang-lumpuhp.jpg",
+    "header_image": "https://i.ibb.co/QfJGQBP/2105042-Pelajar-China-gendong-temannya-yang-lumpuhp.jpg"
+  },
+  {
+    "name": "Menangis",
+    "slug": "menangis",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/y0N2KCN/air-mata-ilustrasi-120520210711-537.jpg",
+    "header_image": "https://i.ibb.co/y0N2KCN/air-mata-ilustrasi-120520210711-537.jpg"
+  },
+  {
+    "name": "Bertelur",
+    "slug": "bertelur",
+    "short": "Kelompok Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dolorum!",
+    "long": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat ratione nihil non quae quam voluptates harum perspiciatis? Ipsam ipsum quia voluptates? Ab, excepturi? Sequi quos iusto similique non, quas eos voluptatem cum, omnis nemo aliquid recusandae debitis ratione dolores modi eligendi eaque explicabo tempore qui exercitationem cumque? Placeat excepturi similique rem neque doloremque obcaecati quae animi illo hic aspernatur!</p>",
+    "card_image": "https://i.ibb.co/YZm1Kdb/image.png",
+    "header_image": "https://i.ibb.co/YZm1Kdb/image.png"
   }
 ]

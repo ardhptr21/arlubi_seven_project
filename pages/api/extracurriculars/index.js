@@ -27,6 +27,17 @@ const handler = async (req, res) => {
  */
 const handlerGET = async (req, res) => {
   const { s, user_id } = req.query;
+  let page = req.query.page || 1;
+  let perPage = req.query.perPage || 4;
+
+  if (!isNaN(page)) {
+    page = parseInt(page);
+  }
+
+  if (!isNaN(perPage)) {
+    perPage = parseInt(perPage);
+  }
+
   try {
     let query = {
       where: {
@@ -38,8 +49,12 @@ const handlerGET = async (req, res) => {
       query = { ...query, include: { users: { where: { user: { id: user_id } }, select: { status: true } } } };
     }
 
+    const totals = await prisma.extracurricular.count(query);
+    query = { ...query, take: perPage, skip: (page - 1) * perPage };
     const extracurriculars = await prisma.extracurricular.findMany(query);
-    return res.status(200).json({ status: 'success', data: extracurriculars });
+    return res
+      .status(200)
+      .json({ status: 'success', perPage, page, totalPage: Math.ceil(totals / perPage), data: extracurriculars });
   } catch (err) {
     return res.status(500).json({ status: 'error', message: err.message });
   }
